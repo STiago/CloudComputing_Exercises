@@ -3,7 +3,7 @@
    La aplicación buscada se corresponde a la realizada para un proyecto de una organización. Consiste en un sistema de gestión de experimentos donde estan identificados tres tipos de usuarios diferenciados por sus funciones, estos son: administrador, consultores de los datos y desarrolladores.
 La plataforma permite a los desarrolladores publicar sus experimientos en el subgrupo al que pertenecen dentro del experimento que les corresponda a cada uno, los usuarios consultores solo tienen acceso a visualizar los datos obtenidos de la compilación de los experimentos. El administrador es el encargado de hacer la supervisión de estos, gestionar permisos y demás.
 
-[Imagen](https://github.com/STiago/Pictures/blob/master/t3e1.png)
+![Imagen](https://dl.github.com/STiago/Pictures/blob/master/t3e1.png)
 
 El patron que se identifica en este proyecto es el modelo cliente-servidor.
 
@@ -16,5 +16,5 @@ Finlamente, para obtener la arquitectura de microservicios, cuando tengamos espe
 ####En la aplicación que se ha usado como ejemplo en el ejercicio anterior, ¿podría usar diferentes lenguajes? ¿Qué almacenes de datos serían los más convenientes?
 En la app anterior se ha usado python pero se podrían usar distintos lenguajes.
 Si la hubiesemos desarrollado con una arquitectura de microservicios se podría implementar cada servicio con el lenguaje más óptimo para cada uno.
-
+Los almacenes de datos está todo en CouchDB lo cual se adapta a la nube correctamente como almacen de datos noSQL.
 
