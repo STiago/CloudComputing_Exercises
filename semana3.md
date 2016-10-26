@@ -3,7 +3,7 @@
    La aplicación buscada se corresponde a la realizada para un proyecto de una organización. Consiste en un sistema de gestión de experimentos donde estan identificados tres tipos de usuarios diferenciados por sus funciones, estos son: administrador, consultores de los datos y desarrolladores.
 La plataforma permite a los desarrolladores publicar sus experimientos en el subgrupo al que pertenecen dentro del experimento que les corresponda a cada uno, los usuarios consultores solo tienen acceso a visualizar los datos obtenidos de la compilación de los experimentos. El administrador es el encargado de hacer la supervisión de estos, gestionar permisos y demás.
 
-![Imagen](https://dl.github.com/STiago/Pictures/blob/master/t3e1.png)
+![Imagen](https://github.com/STiago/Pictures/blob/master/t3e1.png)
 
 El patron que se identifica en este proyecto es el modelo cliente-servidor.
 
