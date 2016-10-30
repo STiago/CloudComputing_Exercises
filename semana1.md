@@ -9,7 +9,7 @@ cd n
 sudo make install
 ```
 
-![e1_i1](dl.drive.google.com/file/d/0B9EKMsCXU3CXYl9jUXBlS2tQS2c/view?usp=sharing/)
+![e1_i1](https://github.com/STiago/Pictures/blob/master/e1_i1.png)
 
 Despues de haberlo instalado correctamente como se muestra en la captura anterior, pasamos a ver las versiones de Node.js que se pueden instalar ejecutando la siguiente línea:
 
@@ -17,7 +17,7 @@ Despues de haberlo instalado correctamente como se muestra en la captura anterio
 sudo n ls
 ```
 
-![e1_i2](https://dl.drive.google.com/drive/folders/0B9EKMsCXU3CXN3QxNTdMbVhWNkU)
+![e1_i2](https://github.com/STiago/Pictures/blob/master/e1_i2.png)
 
 Procedemos a instalar la 0.11.16 y la versión 0.12.7 de la siguiente forma:
 
@@ -26,7 +26,7 @@ sudo n 0.11.16
 sudo n 0.12.7
 ```
 
-![e1_i3](https://dl.drive.google.com/file/d/0B9EKMsCXU3CXTEs0UG9ZRF9XR2M/view?usp=sharing)
+![e1_i3](https://github.com/STiago/Pictures/blob/master/e1_i3.png)
 
 
 ##Ejercicio 2
