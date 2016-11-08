@@ -2,10 +2,10 @@
 
 ## Cloud Computing 2016/2017
 
-Repositiorio de los ejercicios semanales desarrollados para la asignatura Cloud Computing del Máster en Ingeniería Informática.
+Repositiorio de los ejercicios desarrollados para la asignatura Cloud Computing del Máster en Ingeniería Informática.
 
 ### Recursos
-*[Recursos](recursos.md)
+* [Recursos](recursos.md)
 
 ### Semana 1. Desarrollo basado en pruebas
 * [Semana 1](semana1.md)
