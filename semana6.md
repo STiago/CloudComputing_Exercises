@@ -1,37 +1,28 @@
 ##Ejercicio 1
 ####Instalar chef en la máquina virtual que vayamos a usar.
-En primer lugar nos aseguramos de que nuestra máquina virtual, en mi caso ubuntu server, tiene instalado ruby. Para ello hacemos lo siguiente si no está instalado:
-
-![chef1]()
-
-Y una vez comprobado que esta insalado, procedemos a instalar chef con gem install ohai chef:
-
-![chef1]()
-
-o simplemente ejecutamos en nuestra máquina la siguiente línea:
+Procedemos a instalar chef con gem install ohai chef o simplemente ejecutamos en nuestra máquina la siguiente línea:
 
 curl -L https://www.opscode.com/chef/install.sh | bash
+
+comprobamos a continuación de que está instalado haciendo los siguiente:
+
+![chef1](https://github.com/STiago/Pictures/blob/master/e1_t6.png)
 
 ##Ejercicio 2
 ####Crear una receta para instalar nginx, tu editor favorito y algún directorio y fichero que uses de forma habitual.
 
-En primer lugar, creamos nuestra estructura de carpetas como solemos hacer (con el comando mkdir seguido del nombre que le vayamos a dar a los directorios), después dentro ya de nuestro directorio, procedemos a crearnos el archivo "miReceta.rb" el cual contendrá nuestra receta, contenido que se corresponde con la siguiente captura de pantalla:
-
-![Ejercicio2](http://ubuntuone.com/75fpt3NPBBW6AyEMFQBLac)
+En primer lugar, creamos nuestra estructura de carpetas como solemos hacer (con el comando mkdir seguido del nombre que le vayamos a dar a los directorios), después dentro ya de nuestro directorio, procedemos a crearnos el archivo "miReceta.rb" el cual contendrá nuestra receta.
 
 El siguiente paso es crear en el nivel de chef el archibo en json y el archivo solo.rb (el primero refiere nuestra receta y el segundo indica donde está la receta y el archivo json, y además se encarga de ejecutar la receta)
 
-![Ejercicio2](http://ubuntuone.com/5H0GEw7mp872tWM3fG6b7r)
+Seguidamente lanzamos la orden `sudo chef-solo -c chef/solo.rb`.
 
-![Ejercicio2](http://ubuntuone.com/6YTTZPyAUhLd5UDGG3Zc3g)
-
-Seguidamente lanzamos la orden `sudo chef-solo -c chef/solo.rb` la cual nos mostrará lo siguiente si se han realizado correctamente todos los pasos anteriores.
-
-![Ejercicio2](http://ubuntuone.com/7EhyqPlWblkO2Ie40dYklZ)
 
 Ya estaría todo terminado, solo nos queda probar que la receta funciona y nos instala todo lo que hemos introducido en ella correctamente.
 
-![Ejercicio2](http://ubuntuone.com/7T3e9W3XrQ9Yl2MEwg4n9r)
+Todos los archivos creados se muestran en el siguiente árbol de contenidos.
+
+![Ejercicio2](https://github.com/STiago/Pictures/blob/master/e2_t6.png)
 
 ##Ejercicio 3
 ####Escribir en YAML la siguiente estructura de datos en JSON
