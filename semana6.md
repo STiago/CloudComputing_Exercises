@@ -86,7 +86,7 @@ En YAML sería de la siguiente forma:
 ####Desplegar los fuentes de la aplicación de DAI o cualquier otra aplicación que se encuentre en un servidor git público en la máquina virtual Azure (o una máquina virtual local) usando ansible.
 El primer paso que tenemos que realizar es instalarnos Ansible en nuestra máquina anfitriona, primero añadiendo el repositorio, luego haciendo un update y finalmente instalando con `sudo apt-get install ansible` como se muestra a continuación:
 
-![Ejercicio 4](http://ubuntuone.com/1ADYpCoerrWUWIXBfLDO7O)
+![Ejercicio5](https://github.com/STiago/Pictures/blob/master/e5_t6.png)
 
 
 Tras instalar Ansible, nos creamos el fichero ansible_host en el cual debemos de introducir las máquinas que vamos a controlar, en mi caso sería:
