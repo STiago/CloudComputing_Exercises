@@ -39,9 +39,9 @@ Fichero json
 Fichero solo.rb
 
 ```rb
-file_cache_path "/home/fblupi/chef"
-cookbook_path "/home/fblupi/chef/cookbooks"
-json_attribs "/home/fblupi/chef/node.json"
+file_cache_path "/home/victoria/chef"
+cookbook_path "/home/victoria/chef/cookbooks"
+json_attribs "/home/victoria/chef/node.json"
 ```
 
 Seguidamente lanzamos la orden `sudo chef-solo -c chef/solo.rb`.
@@ -83,30 +83,20 @@ En YAML sería de la siguiente forma:
 
 
 ##Ejercicio 5
-####Desplegar los fuentes de la aplicación de DAI o cualquier otra aplicación que se encuentre en un servidor git público en la máquina virtual Azure (o una máquina virtual local) usando ansible.
+####Desplegar los fuentes de la aplicación de DAI o cualquier otra aplicación que se encuentre en un servidor git público en la máquina virtual AWS (o una máquina virtual local) usando ansible.
 El primer paso que tenemos que realizar es instalarnos Ansible en nuestra máquina anfitriona, primero añadiendo el repositorio, luego haciendo un update y finalmente instalando con `sudo apt-get install ansible` como se muestra a continuación:
 
 ![Ejercicio5](https://github.com/STiago/Pictures/blob/master/e5_t6.png)
 
 
-Tras instalar Ansible, nos creamos el fichero ansible_host en el cual debemos de introducir las máquinas que vamos a controlar, en mi caso sería:
+Tras instalar Ansible, nos creamos el fichero ansible_host en el cual debemos de introducir las máquinas que vamos a controlar.
 
-`[azure]`
-`victoriasantiago.cloudapp.net`
+A continuación, cambiamos el valor de ANSIBLE_HOSTS y hacemos un ping a nuestra máquina de AWS comprobando que nos conecta mediante ansible.
 
-![Ejercicio 4](http://ubuntuone.com/3k61J2ofJemgBsOovQpS7y)
 
-A continuación, cambiamos el valor de ANSIBLE_HOSTS y hacemos un ping a nuestra máquina de Azure comprobando que nos conecta mediante ansible.
+A continuación instalamos git en la máquina de AWS y tras su instalación, ya en nuestra máquina anfitriona, procedemos a hacer el despliegue de los fuentes de nuestra aplicación.
 
-![Ejercicio 4](http://ubuntuone.com/5ODQV45JN9xwfutpFDzQ2S)
-
-A continuación instalamos git en la máquina de azure y tras su instalación, ya en nuestra máquina anfitriona, procedemos a hacer el despliegue de los fuentes de nuestra aplicación de DAI como se muestra en la siguiente captura:
-
-![Ejercicio 4](http://ubuntuone.com/7Wef1yaLAyYHJ9yP4p802U)
-
-Finalmente, para ver que se ha realizado todo correctamente, basta con hacer en la máquina un ls o tree que nos muestre que el despliegue se ha llevado a cabo bien.
-
-![Ejercicio 4](http://ubuntuone.com/4Ch1wWfQXFdzs6fgrHBMlo)
+![Ejercicio 4](https://github.com/STiago/Pictures/blob/master/ansiblepablo.png)
 
 
 ##Ejercicio 6
@@ -114,21 +104,30 @@ Finalmente, para ver que se ha realizado todo correctamente, basta con hacer en 
 
 En primer lugar, nos creamos el archivo playbook con extensión yml en el cual introducimos lo siguiente:
 
-![Ejercicio 5](http://ubuntuone.com/4UaSuda6ZvE1pf8nrkhexu)
+ ```
+- hosts: aws
+  sudo: true
+  remote_user: ubuntu
+  tasks:
+  - name: Update cache
+    apt: update_cache=yes
+  - name: Install Pip
+    apt: name=python-setuptools state=present
+    apt: name=python-dev state=present
+    apt: name=python-pip state=present
+  - name: Instalar MongoDB
+    apt: name=mongodb state=present
+  - name: Instalamos pyTelegramBotAPI
+    pip: name=pyTelegramBotAPI
+ ```
 
 Seguidamente, en nuestra máquina anfitriona introducimos lo siguiente:
 
 `export ANSIBLE_HOSTS=~/ansible_hosts`
 `ansible-playbook playbook.yml --ask-pass -u victoria`
 
-Quedando de la siguiente forma:
 
-![Ejercicio 5](http://ubuntuone.com/14pxhjeWeBbmbrHWLWdhXm)
-
-
-Y finalmente, abrimos nuestro navegador y podremos ver que nuestra aplicación se encuentra ejecutandose:
-
-![Ejercicio 5](http://ubuntuone.com/0alDyvrQbLTdFcRmAWr7fS)
+Y finalmente, abrimos nuestro navegador y podremos ver que nuestra aplicación se encuentra ejecutandose.
 
 
 
