@@ -11,15 +11,13 @@ Tras instalarlo, procedemos a realizar los siguientes pasos:
 `vagrant init {title}`
 `vagrant up`
 
-y nos quedaria finalmente como se muestra en las siguientes volcados:
+Insertamos en consola la siguiente línea de comandos también:
 
-![Ejercicio 6](http://ubuntuone.com/1bFtNiLMltht4iXj2nMhjY)
+`vagrant box add debian-jessie https://github.com/holms/vagrant-jessie-box/releases/download/Jessie-v0.1/Debian-jessie-amd64-netboot.box`
 
-Y conectar a la máquina con ssh :
+Y ya solo queda conectar a la máquina con ssh :
 
 `vagrant ssh`
-
-![Ejercicio 6](http://ubuntuone.com/5T8AJ8E7A6mcuZNsEB4rw0)
 
 
 ##Ejercicio 2
@@ -58,14 +56,7 @@ Comenzamos la configuración añadiendo en el fichero ansible_host la IP de nues
 ```
 El siguiente paso es indicarle a Ansible que tiene que usar este fichero usando `export ANSIBLE_HOSTS=~/ansible_hosts` y posteriormente introduciendo la linea `config.vm.network :private_network, ip: "192.168.1.36" ` con una IP desde la que podamos acceder desde nuestro ordenador todo ello en el fichero Vagrantfile.
 
-Por lo tanto el fichero Vagrant quedará como sigue:
-
-![Ejercicio 8](http://ubuntuone.com/2Wre8oX4Zpj2HOGECb2hLs)
-
-Ahora, nos creamos el playbook para que Ansible que nos instale en la máquina Nginx. El fichero playbook quedaría con el siguiente contenido:
-
-![Ejercicio 8](http://ubuntuone.com/0xtBuucj4cN88DN0nSdsAs)
-
+Ahora, nos creamos el playbook para que Ansible que nos instale en la máquina Nginx como hemos visto se ha hecho en los ejercicios del tema 6.
 
 A continuación, procedemos a aprovisionar la máquina al igual que hemos hecho en el ejercicio anterior, lanzando por línea de comandos:
 
