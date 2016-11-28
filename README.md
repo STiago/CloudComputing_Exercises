@@ -16,5 +16,8 @@ Repositiorio de los ejercicios desarrollados para la asignatura Cloud Computing 
 ### Semana 6. Gestión de infraestructuras virtuales
 * [Semana 6](semana6.md)
 
-### Semana 7. Orquestación de máquinas virtuales
-* [Semana 7](semana7.md)
+### Semana 7-8. Orquestación de máquinas virtuales
+* [Semana 7 y 8](semana7.md)
+
+### Semana 9. Orquestación de máquinas virtuales
+* [Semana 9](semana9.md)
