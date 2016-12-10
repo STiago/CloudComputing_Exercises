@@ -7,15 +7,15 @@ En primer lugar descargamos la máquina virtual de Debian usando vagrant con el 
 
 `vagrant box add debian-jessie https://atlas.hashicorp.com/ARTACK/boxes/debian-jessie`
 
-[Ejercicio 1](https://github.com/STiago/Pictures/blob/master/orquestacion1.png)
+![Ejercicio 1](https://github.com/STiago/Pictures/blob/master/orquestacion1.png)
 
 Seguidamente hacemos `vagrant init vagrant-jessie`.
 
-[Ejercicio 1](https://github.com/STiago/Pictures/blob/master/orquestacion2.png)
+![Ejercicio 1](https://github.com/STiago/Pictures/blob/master/orquestacion2.png)
 
 Para empezar a usar la máquina virtual usamos `vagrant up`. 
 
-[Ejercicio 1](https://github.com/STiago/Pictures/blob/master/orquestacion3.png)
+![Ejercicio 1](https://github.com/STiago/Pictures/blob/master/orquestacion3.png)
 
 Con ello, Virtual Box arrancará la máquina a la cual se podrá uno conectar por medio de `vagrant ssh`.
 
