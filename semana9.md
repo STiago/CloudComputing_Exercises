@@ -27,7 +27,7 @@ Tras crear la máquina pasamos a provisionarla insertando el siguiente comando `
 
 
 ##Ejercicio 3
-####Crear un script para provisionar `nginx` o cualquier otro servidor web que pueda ser útil para alguna otra práctica
+####Crear un script para provisionar `nginx` o cualquier otro servidor web que pueda ser útil para alguna otra práctica.
 En primer lugar, editamos el fichero ***Vagrantfile*** dejandolo como se muestra a continuación:
 
 ``` 
@@ -52,7 +52,7 @@ Tras realizas las modificaciones anteriores, ejecutamos en nuestra máquina `vag
 
 
 ##Ejercicio 4
-####Configurar tu máquina virtual usando `vagrant` con el provisionador ansible
+####Configurar tu máquina virtual usando `vagrant` con el provisionador ansible.
 Comenzamos la configuración añadiendo en el fichero ansible_host la IP de nuestra máquina como se muestra a continuación:
 
 ```
