@@ -15,9 +15,11 @@ Seguidamente hacemos `vagrant init vagrant-jessie`.
 
 Para empezar a usar la máquina virtual usamos `vagrant up`. 
 
-![Ejercicio 1](https://github.com/STiago/Pictures/blob/master/orquestacion3.png)
+![Ejercicio 1](https://github.com/STiago/Pictures/blob/master/vagrantup.png)
 
 Con ello, Virtual Box arrancará la máquina a la cual se podrá uno conectar por medio de `vagrant ssh`.
+
+![Ejercicio 1](https://github.com/STiago/Pictures/blob/master/vagrantssh.png)
 
 Tras crear la máquina pasamos a provisionarla insertando el siguiente comando `vagrant provision`.
 
@@ -61,7 +63,7 @@ Comenzamos la configuración añadiendo en el fichero ansible_host la IP de nues
 ```
 El siguiente paso es indicarle a Ansible que tiene que usar este fichero usando `export ANSIBLE_HOSTS=~/ansible_hosts` y posteriormente introduciendo la linea `config.vm.network :private_network, ip: "192.168.1.36" ` con una IP desde la que podamos acceder desde nuestro ordenador todo ello en el fichero Vagrantfile.
 
-Ahora, nos creamos el playbook para que Ansible que nos instale en la máquina Nginx como hemos visto se ha hecho en los ejercicios del tema 6.
+Ahora, nos creamos el playbook para que Ansible que nos instale en la máquina Nginx como hemos visto se ha hecho en los ejercicios del tema anterior.
 
 A continuación, procedemos a aprovisionar la máquina al igual que hemos hecho en el ejercicio anterior, lanzando por línea de comandos:
 
